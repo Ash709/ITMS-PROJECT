@@ -7,19 +7,17 @@ from ultralytics import YOLO
 
 app = Flask(__name__)
 
-# Load YOLO model
 model = YOLO("yolov8n.pt")
 
-# Absolute base directory where your project videos are
 BASE_DIR = r"C:\Users\ashlin mishra\Downloads\Final Year Project-20250617T143924Z-1-001\Final Year Project"
 
-# Open video streams with absolute paths
 videos = [
-    cv2.VideoCapture(os.path.join(BASE_DIR, "Video", "lane1.mp4")),
-    cv2.VideoCapture(os.path.join(BASE_DIR, "Video", "lane2.mp4")),
-    cv2.VideoCapture(os.path.join(BASE_DIR, "Video", "lane3.mp4")),
-    cv2.VideoCapture(os.path.join(BASE_DIR, "Video", "lane4.mp4")),
+    cv2.VideoCapture(r"C:\Users\ashlin mishra\Downloads\Final Year Project-20250617T143924Z-1-001\Final Year Project\Video\lane1.mp4"),
+    cv2.VideoCapture(r"C:\Users\ashlin mishra\Downloads\Final Year Project-20250617T143924Z-1-001\Final Year Project\Video\lane2.mp4"),
+    cv2.VideoCapture(r"C:\Users\ashlin mishra\Downloads\Final Year Project-20250617T143924Z-1-001\Final Year Project\Video\lane3.mp4"),
+    cv2.VideoCapture(r"C:\Users\ashlin mishra\Downloads\Final Year Project-20250617T143924Z-1-001\Final Year Project\Video\lane4.mp4"),
 ]
+
 
 traffic_lights = ["RED", "RED", "RED", "RED"]
 lane_counts = [0] * 4
