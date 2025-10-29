@@ -1,17 +1,20 @@
-# Python 
-__pycache__/ 
-*.pyc 
-*.pyo 
-*.pyd 
-*.db 
-*.sqlite3 
-*.log 
- 
-# Virtual Environment 
-venv/ 
-env/ 
-ENV/ 
- 
-# IDEs 
-.vscode/ 
-.idea/ 
+# Python cache
+__pycache__/
+*.pyc
+
+# Virtual environment
+venv/
+
+# IDE settings (optional)
+.vscode/
+.idea/
+
+# YOLO model weights (large files)
+*.pt
+
+# Video dataset (large files)
+Video/
+*.mp4
+
+# Flask temporary files
+instance/
